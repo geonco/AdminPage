@@ -1,0 +1,247 @@
+div {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: rgb(243, 242, 242);
+}
+.main-bg {
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    border: none;
+}
+.side-bar {
+    width: 200px;
+    height: 100%;
+    background: rgb(70, 0, 255);
+    position: absolute;
+    top: 0%;
+    margin-left: -160px;
+    transition: all 0.7s;
+    z-index: 5;
+    position: fixed;
+}
+.side-bar-menu {
+    width: 100%;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.side-bar-menu p {
+    float: left;
+    padding: 10px;
+}
+.side-bar-menu i {
+    float: right;
+    padding: 13px;
+}
+.side-bar:hover {
+    margin-left: 0px;
+}
+.side-bar:hover p {
+    animation-name: 텍스트;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+.side-bar:hover i {
+    animation-name: 아이콘;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+@keyframes 텍스트 {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(70px);
+    }
+}
+@keyframes 아이콘 {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-130px);
+    }
+}
+.sub-bg {
+    margin-left: 40px;
+}
+.header {
+    width: 100%;
+    height: 50px;
+    background: white;
+    border: none;
+    box-shadow: 0 6px 6px -6px grey;
+}
+.search {
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    transition: all 0.7s;
+}
+.search:focus-within {
+    width: 350px;
+}
+.search-text {
+    height: 30px;
+}
+.search-button {
+    width: 30px;
+    height: 30px;
+    background: rgb(46, 46, 46);
+    color: white;
+    position: relative;
+}
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.right-menu {
+    background: white;
+    float: right;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    width: 240px;
+    height: 40px;
+    margin-top: -25px;
+}
+.bell {
+    background: white;
+    border: none;
+    color: darkgray;
+    margin: 20px;
+}
+.mail {
+    background: white;
+    border: none;
+    color: darkgray;
+}
+.name {
+    margin: 20px;
+    color: darkgray;
+}
+
+.body {
+    width: 100%;
+    height: 750px;
+}
+.dashboard-title {
+    font-weight: 600;
+    margin: 5px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.dashboard-menu {
+    width: 100%;
+    height: 100px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px lightgray;
+    position: relative;
+    padding: 15px;
+    margin: 5px;
+}
+.Monthly-Earnings {
+    border-left: 3px solid skyblue;
+}
+.Annual-Earnings {
+    border-left: 3px solid green;
+}
+.Tasks {
+    border-left: 3px solid rgb(70, 0, 255);
+}
+.Requests {
+    border-left: 3px solid gold;
+}
+.dashboard-icon {
+    position: absolute;
+    top: 30%;
+    right: 7%;
+    color: grey;
+}
+
+.dashboard-menu h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -12px;
+    text-align: left;
+}
+.dashboard-menu p {
+    font-size: 14px;
+    text-align: left;
+}
+.chart {
+    padding: 15px;
+}
+.chart-name {
+    font-weight: bold;
+}
+.chart-space {
+    box-shadow: 2px 2px 2px lightgray;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.task-space {
+    box-shadow: 2px 2px 2px lightgray;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+.task-name {
+    font-weight: bold;
+}
+.task-badge {
+    float: right;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 3px;
+    padding-top: 3px;
+}
+.badge-size {
+    font-size: .5em;
+    padding: 0.2em 0.4em;
+}
+.font-size-smaller {
+    font-size: 15px;
+    text-align: left;
+}
+.col-sm-8, .col-sm-4 {
+    padding-right: 7px;
+}
+.right-menu .icon-button {
+    display: none;
+}
+@media screen and (max-width: 576px) {
+    .right-menu {
+        background: white;
+        width: 45px;
+    }
+    .bell {
+        display: none;
+    }
+    .mail {
+        display: none;
+    }
+    .name {
+        display: none;
+    }
+    .right-menu .icon-button {
+        display: contents;
+    }
+    .menu-icon {
+        border: 1px solid lightgray;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+        color: gray;
+    }
+}
